@@ -2,5 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+        bean  ：配置一个对象，将对象交给iIOC容器管理
+       class : 设置bean对象对应的类型
+    -->
+    <bean id="helloworld" class="com.zhr.springhello.SpringHello"/>
+    <bean id="student" class="com.zhr.springhello.Student"/>
 
 </beans>
