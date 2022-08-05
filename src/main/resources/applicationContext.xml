@@ -18,5 +18,11 @@
         <property name="gender" value="男"/>
         <property name="age" value="23"/>
     </bean>
+    <bean id="studentone" class="com.zhr.springhello.Student">
+        <constructor-arg value="1002"/>
+        <constructor-arg value="李四"/>
+        <constructor-arg value="24"/>
+        <constructor-arg value="女"/>
+    </bean>
 
 </beans>
