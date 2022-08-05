@@ -31,7 +31,8 @@ public class Test {
 //        Student student = ioc.getBean("student", Student.class);
 //        System.out.println(student);
         //
-        Student student = ioc.getBean("studentone", Student.class);
+        Student student = ioc.getBean("studenttwo" +
+                "", Student.class);
         System.out.println(student);
     }
 

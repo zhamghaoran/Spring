@@ -35,4 +35,18 @@
         </property>
     </bean>
 
+    <!--为一个类类型赋值，引用外部bean来实现-->
+    <bean id="calls" class="com.zhr.springhello.pojo.Class">
+        <property name="cid" value="111"/>
+        <property name="cname" value="asdggad"/>
+    </bean>
+    <bean id="studenttwo" class="com.zhr.springhello.pojo.Student">
+        <property name="sid" value="1004"/>
+        <property name="sname" value="阿卡纳发"/>
+        <property name="age" value="145"/>
+        <property name="gender" value="男"/>
+        <property name="aClass" ref="calls"/>
+    </bean>
+
+
 </beans>
