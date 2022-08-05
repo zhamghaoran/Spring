@@ -48,5 +48,14 @@
         <property name="aClass" ref="calls"/>
     </bean>
 
-
+    <!--通过级联的方式，但是需要提前实例化对象-->
+    <bean id="studentthree" class="com.zhr.springhello.pojo.Student">
+        <property name="sid" value="1004"/>
+        <property name="sname" value="阿卡纳发"/>
+        <property name="age" value="145"/>
+        <property name="gender" value="男"/>
+        <property name="aClass" ref="calls"/>
+        <property name="aClass.cid" value="123"/>
+        <property name="aClass.cname" value="asngdlakg"/>
+    </bean>
 </beans>
