@@ -4,8 +4,14 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
-    //    ioc在创建实例化对象的时候，使用的是工厂模式：class.forname().newinstance来创建对象，
-    //    因此该类必须要有无参构造。
+    /**
+     * ioc在创建实例化对象的时候，使用的是工厂模式：class.forname().newinstance来创建对象，
+     * 因此该类必须要有无参构造。
+     * 结论：
+     * 根据类型来获取bean的时候，在满足唯一bean的前提下，
+     * 其实只看：对象 instanceof指定类型，的返货结果
+     * 只要返回true就可以认定为和类型匹配，能获取到。
+     * */
 
     public static void main(String[] args) {
         // 获取ioc容器
@@ -24,6 +30,7 @@ public class Test {
         // 3.根据bean的id和类型获取
         Student student = ioc.getBean("student", Student.class);
         System.out.println(student);
+        //
 
     }
 
