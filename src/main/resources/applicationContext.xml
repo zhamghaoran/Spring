@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:utils="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
     <!--
         bean  ：配置一个对象，将对象交给IOC容器管理
        class : 设置bean对象对应的类型
@@ -81,4 +81,24 @@
             </array>
         </property>
     </bean>
+    <bean id="studentfive" class="com.zhr.springhello.pojo.Class">
+        <property name="cid" value="1"/>
+        <property name="cname" value="fbaaf"/>
+        <property name="students" ref="studentlist"/>
+<!--        <property name="students">-->
+<!--            <list>-->
+<!--                <ref bean="student"/>-->
+<!--                <ref bean="studenttwo"/>-->
+<!--                <ref bean="studentthree"/>-->
+<!--                <ref bean="studentfour"/>-->
+<!--            </list>-->
+<!--        </property>-->
+    </bean>
+    <!-- 配置集合类型的bean，需要使用utils的约束-->
+    <utils:list id="studentlist">
+        <ref bean="student"/>
+        <ref bean="studenttwo"/>
+        <ref bean="studentthree"/>
+    </utils:list>
+
 </beans>
