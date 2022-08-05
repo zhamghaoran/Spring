@@ -20,8 +20,14 @@
     </bean>
     <bean id="studentone" class="com.zhr.springhello.Student">
         <property name="age" value="10"/>
-
-        <property name="gender" value="&lt;男&gt;"/>
+        <!--
+         &lt;小于  &gt;大于
+         <![CDATA[<qaq>]]> 为xml 的特殊标签，不能写在值当中，只能写在标签当中
+         当中的值会按照原样解析。
+        -->
+        <property name="gender">
+            <value><![CDATA[<qaq>]]></value>
+        </property>
         <property name="sid" value="1"/>
         <!-- 赋空值-->
         <property name="sname">
