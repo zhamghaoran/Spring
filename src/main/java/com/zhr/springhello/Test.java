@@ -11,6 +11,7 @@ public class Test {
      * 根据类型来获取bean的时候，在满足唯一bean的前提下，
      * 其实只看：对象 instanceof指定类型，的返货结果
      * 只要返回true就可以认定为和类型匹配，能获取到。
+     * 即通过bean的类型，bean所继承的类的类型，bean所实现的接口的类型都可以获取到bean。
      * */
 
     public static void main(String[] args) {
@@ -28,10 +29,11 @@ public class Test {
 //        Student bean = ioc.getBean(Student.class);
 //        System.out.println(bean);
         // 3.根据bean的id和类型获取
+//        Student student = ioc.getBean("student", Student.class);
+//        System.out.println(student);
+        //
         Student student = ioc.getBean("student", Student.class);
         System.out.println(student);
-        //
-
     }
 
 }
