@@ -1,4 +1,4 @@
-package com.zhr.springhello;
+package com.zhr.springhello.pojo;
 
 import java.util.PrimitiveIterator;
 
@@ -7,6 +7,24 @@ public class Student {
     private String sname;
     private Integer age;
     private String gender;
+    private Class aClass;
+    @Override
+    public String toString() {
+        return "Student{" +
+                "sid=" + sid +
+                ", sname='" + sname + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", aClass=" + aClass +
+                '}';
+    }
+    public Class getaClass() {
+        return aClass;
+    }
+
+    public void setaClass(Class aClass) {
+        this.aClass = aClass;
+    }
 
     public Student(Integer sid, String sname, Integer age, String gender) {
         this.sid = sid;
@@ -48,13 +66,4 @@ public class Student {
         this.gender = gender;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "sid=" + sid +
-                ", sname='" + sname + '\'' +
-                ", age=" + age +
-                ", gender='" + gender + '\'' +
-                '}';
-    }
 }

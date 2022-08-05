@@ -1,4 +1,4 @@
-package com.zhr.springhello;
+package com.zhr.springhello.pojo;
 
 public class SpringHello {
 

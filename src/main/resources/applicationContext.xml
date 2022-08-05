@@ -6,8 +6,8 @@
         bean  ：配置一个对象，将对象交给IOC容器管理
        class : 设置bean对象对应的类型
     -->
-    <bean id="helloworld" class="com.zhr.springhello.SpringHello"/>
-    <bean id="student" class="com.zhr.springhello.Student">
+    <bean id="helloworld" class="com.zhr.springhello.pojo.SpringHello"/>
+    <bean id="student" class="com.zhr.springhello.pojo.Student">
         <!--       setter 注入
                 property 通过成员变量的方法来进行赋值
                 name 设置需要赋值的属性名
@@ -18,7 +18,7 @@
         <property name="gender" value="男"/>
         <property name="age" value="23"/>
     </bean>
-    <bean id="studentone" class="com.zhr.springhello.Student">
+    <bean id="studentone" class="com.zhr.springhello.pojo.Student">
         <property name="age" value="10"/>
         <!--
          &lt;小于  &gt;大于

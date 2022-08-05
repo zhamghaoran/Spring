@@ -1,5 +1,4 @@
-package com.zhr.springhello;
-
+import com.zhr.springhello.pojo.Student;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
