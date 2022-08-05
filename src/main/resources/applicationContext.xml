@@ -72,5 +72,13 @@
                 <property name="cid" value="1"/>
             </bean>
         </property>
+        <!--给数组类型的元素赋值-->
+        <property name="hobby">
+            <array>
+                <value>nkakgrn</value>
+                <value>asgagr</value>
+                <value>asdgsaggas</value>
+            </array>
+        </property>
     </bean>
 </beans>

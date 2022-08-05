@@ -1,5 +1,6 @@
 package com.zhr.springhello.pojo;
 
+import java.util.Arrays;
 import java.util.PrimitiveIterator;
 
 public class Student {
@@ -8,6 +9,7 @@ public class Student {
     private Integer age;
     private String gender;
     private Class aClass;
+
     @Override
     public String toString() {
         return "Student{" +
@@ -16,8 +18,29 @@ public class Student {
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
                 ", aClass=" + aClass +
+                ", hobby=" + Arrays.toString(hobby) +
                 '}';
     }
+
+    public Student(Integer sid, String sname, Integer age, String gender, Class aClass, String[] hobby) {
+        this.sid = sid;
+        this.sname = sname;
+        this.age = age;
+        this.gender = gender;
+        this.aClass = aClass;
+        this.hobby = hobby;
+    }
+
+    public String[] getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(String[] hobby) {
+        this.hobby = hobby;
+    }
+
+    private String[] hobby;
+
     public Class getaClass() {
         return aClass;
     }
