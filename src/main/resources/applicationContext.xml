@@ -58,4 +58,19 @@
         <property name="aClass.cid" value="123"/>
         <property name="aClass.cname" value="asngdlakg"/>
     </bean>
+
+
+    <!--    内部bean，只能在内部中使用，不能直接被ioc容器获取-->
+    <bean id="studentfour" class="com.zhr.springhello.pojo.Student">
+        <property name="sid" value="1004"/>
+        <property name="sname" value="阿卡纳发"/>
+        <property name="age" value="145"/>
+        <property name="gender" value="男"/>
+        <property name="aClass">
+            <bean id="classinner" class="com.zhr.springhello.pojo.Class">
+                <property name="cname" value="asghas"/>
+                <property name="cid" value="1"/>
+            </bean>
+        </property>
+    </bean>
 </beans>
