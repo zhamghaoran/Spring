@@ -99,14 +99,14 @@
         <property name="cid" value="1"/>
         <property name="cname" value="fbaaf"/>
         <property name="students" ref="studentlist"/>
-<!--        <property name="students">-->
-<!--            <list>-->
-<!--                <ref bean="student"/>-->
-<!--                <ref bean="studenttwo"/>-->
-<!--                <ref bean="studentthree"/>-->
-<!--                <ref bean="studentfour"/>-->
-<!--            </list>-->
-<!--        </property>-->
+        <!--        <property name="students">-->
+        <!--            <list>-->
+        <!--                <ref bean="student"/>-->
+        <!--                <ref bean="studenttwo"/>-->
+        <!--                <ref bean="studentthree"/>-->
+        <!--                <ref bean="studentfour"/>-->
+        <!--            </list>-->
+        <!--        </property>-->
     </bean>
     <!-- 配置集合类型的bean，需要使用utils的约束-->
     <utils:list id="studentlist">
@@ -118,8 +118,9 @@
         <entry key="ads" value-ref="teacher1"/>
         <entry key="aaa" value-ref="teacher2"/>
     </utils:map>
+    <!--p命名空间-->
     <bean id="studentsix" class="com.zhr.springhello.pojo.Student"
-    p:sid="1005" p:sname="小明" p:teacherMap-ref="map">
+          p:sid="1005" p:sname="小明" p:teacherMap-ref="map">
 
     </bean>
 
