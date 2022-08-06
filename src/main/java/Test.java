@@ -1,8 +1,11 @@
+import com.alibaba.druid.pool.DruidDataSource;
 import com.zhr.springhello.pojo.Class;
 import com.zhr.springhello.pojo.Student;
 import javafx.scene.control.TableColumn;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.sql.SQLException;
 
 public class Test {
     /**
@@ -15,13 +18,13 @@ public class Test {
      * 即通过bean的类型，bean所继承的类的类型，bean所实现的接口的类型都可以获取到bean。
      * */
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         // 获取ioc容器
-        ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
+//        ApplicationContext ioc = new ClassPathXmlApplicationContext("applicationContext.xml");
         //Ioc中的bean对象
-        /**
-         * 获取bean的三种方式
-         * */
+        /*
+          获取bean的三种方式
+          */
         // 1.根据bean id获取
 //        Student student = (Student) ioc.getBean("student");
 //        System.out.println(student);
@@ -32,9 +35,14 @@ public class Test {
         // 3.根据bean的id和类型获取
 //        Student student = ioc.getBean("student", Student.class);
 //        System.out.println(student);
-        //
-        Student studentthree = ioc.getBean("studentsix", Student.class);
-        System.out.println(studentthree);
+        /**
+         * 测试bean的作用域
+         * */
+//        ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("spring-scope.xml");
+//        Student student = ioc.getBean("student", Student.class);
+//        Student student1 = ioc.getBean("student", Student.class);
+//        System.out.println(student.equals(student1));
     }
+
 
 }
