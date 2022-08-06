@@ -1,5 +1,6 @@
 import com.zhr.springhello.pojo.Class;
 import com.zhr.springhello.pojo.Student;
+import javafx.scene.control.TableColumn;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -32,8 +33,8 @@ public class Test {
 //        Student student = ioc.getBean("student", Student.class);
 //        System.out.println(student);
         //
-        Class student = ioc.getBean("studentfive",Class.class);
-        System.out.println(student.toString());
+        Student studentthree = ioc.getBean("studentsix", Student.class);
+        System.out.println(studentthree);
     }
 
 }

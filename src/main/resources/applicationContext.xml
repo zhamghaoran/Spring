@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:utils="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
     <!--
         bean  ：配置一个对象，将对象交给IOC容器管理
@@ -47,7 +48,14 @@
         <property name="gender" value="男"/>
         <property name="aClass" ref="calls"/>
     </bean>
-
+    <bean id="teacher1" class="com.zhr.springhello.pojo.Teacher">
+        <property name="tid" value="12"/>
+        <property name="tname" value="abc"/>
+    </bean>
+    <bean id="teacher2" class="com.zhr.springhello.pojo.Teacher">
+        <property name="tname" value="aaa"/>
+        <property name="tid" value="22"/>
+    </bean>
     <!--通过级联的方式，但是需要提前实例化对象-->
     <bean id="studentthree" class="com.zhr.springhello.pojo.Student">
         <property name="sid" value="1004"/>
@@ -57,6 +65,12 @@
         <property name="aClass" ref="calls"/>
         <property name="aClass.cid" value="123"/>
         <property name="aClass.cname" value="asngdlakg"/>
+        <property name="teacherMap">
+            <map>
+                <entry key="ads" value-ref="teacher1"/>
+                <entry key="aaa" value-ref="teacher2"/>
+            </map>
+        </property>
     </bean>
 
 
@@ -100,5 +114,13 @@
         <ref bean="studenttwo"/>
         <ref bean="studentthree"/>
     </utils:list>
+    <utils:map id="map">
+        <entry key="ads" value-ref="teacher1"/>
+        <entry key="aaa" value-ref="teacher2"/>
+    </utils:map>
+    <bean id="studentsix" class="com.zhr.springhello.pojo.Student"
+    p:sid="1005" p:sname="小明" p:teacherMap-ref="map">
+
+    </bean>
 
 </beans>

@@ -2,6 +2,7 @@ package com.zhr.springhello.pojo;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.PrimitiveIterator;
 
 public class Student {
@@ -10,7 +11,17 @@ public class Student {
     private Integer age;
     private String gender;
     private Class aClass;
+    private Map<String,Teacher> teacherMap;
 
+    public Student(Integer sid, String sname, Integer age, String gender, Class aClass, Map<String, Teacher> teacherMap, String[] hobby) {
+        this.sid = sid;
+        this.sname = sname;
+        this.age = age;
+        this.gender = gender;
+        this.aClass = aClass;
+        this.teacherMap = teacherMap;
+        this.hobby = hobby;
+    }
 
     @Override
     public String toString() {
@@ -20,8 +31,17 @@ public class Student {
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
                 ", aClass=" + aClass +
+                ", teacherMap=" + teacherMap +
                 ", hobby=" + Arrays.toString(hobby) +
                 '}';
+    }
+
+    public Map<String, Teacher> getTeacherMap() {
+        return teacherMap;
+    }
+
+    public void setTeacherMap(Map<String, Teacher> teacherMap) {
+        this.teacherMap = teacherMap;
     }
 
     public Student(Integer sid, String sname, Integer age, String gender, Class aClass, String[] hobby) {
