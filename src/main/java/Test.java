@@ -63,10 +63,5 @@ public class Test {
         System.out.println(user);
         classPathXmlApplicationContext.close();
 
-
-
-
     }
-
-
 }
