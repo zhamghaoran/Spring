@@ -1,3 +1,5 @@
+package com.zhr.springhello;
+
 import com.alibaba.druid.pool.DruidDataSource;
 import com.zhr.springhello.pojo.Class;
 import com.zhr.springhello.pojo.Student;
@@ -15,7 +17,7 @@ public class Test {
      * 因此该类必须要有无参构造。
      * 结论：
      * 根据类型来获取bean的时候，在满足唯一bean的前提下，
-     * 其实只看：对象 instanceof指定类型，的返货结果
+     * 其实只看：对象 instanceof指定类型，的返回结果
      * 只要返回true就可以认定为和类型匹配，能获取到。
      * 即通过bean的类型，bean所继承的类的类型，bean所实现的接口的类型都可以获取到bean。
      * */
