@@ -17,7 +17,8 @@ public class autowirebyxml {
      * 1.若通过类型没有找到任何一个类型匹配的bean，此时不装配，属性使用的是默认值。
      * 2.若通过类型找到了多个类型匹配的bean，会抛出异常
      * 总结：我们在使用bytype在自动装配的时候，ioc容器中只有一个类型匹配的bean能够为属性赋值。
-     * byName :
+     * byName :将要赋值的属性的属性名作为bean的id在ioc容器中匹配某个bean ，为属性赋值
+     * 总结：当类型匹配的bean有多个是可以使用byName来实现自动装配
      * */
     @Test
     public void autowire() {

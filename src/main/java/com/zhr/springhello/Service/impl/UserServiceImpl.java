@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void saveuser() {
+    public void saveUser() {
         System.out.println("保存成功");
     }
 }

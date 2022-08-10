@@ -13,6 +13,6 @@ public class UserController {
         this.userService = userService;
     }
     public void SaveUser() {
-        userService.saveuser();
+        userService.saveUser();
     }
 }
